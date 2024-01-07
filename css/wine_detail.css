@@ -1,0 +1,450 @@
+/* Fonts */
+@font-face {
+  font-family: "EB Garamond";
+  font-weight: 400;
+  src: url(../assets/fonts/EB_Garamond/static/EBGaramond-Regular.ttf);
+}
+
+@font-face {
+font-family: "GFS Didot";
+font-weight: 400;
+src: url(../assets/fonts/GFS_Didot/GFSDidot-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  font-weight: 700;
+  src: url(../assets/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf);
+}
+
+@font-face {
+font-family: "Libre Bodoni";
+font-weight: 700;
+src: url(../assets/fonts/Libre_Bodoni/static/LibreBodoni-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  src: url(../assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+  }
+
+@font-face {
+ font-family: "Playfair Display SC";
+  font-weight: 700;
+  src: url(../assets/fonts/Playfair_Display_SC/PlayfairDisplaySC-Regular.ttf);
+}
+
+/* Dark and Elegant Color Palette for a Wine Website */
+:root {
+  --textDark: #ffffff;         /* White for Text on Dark Background */
+  --textLight: #333333;       /* Dark Gray for Text on Light Background */
+  --background: #1a1a1a;      /* Slightly Lighter Dark Background */
+  --primary: #d4af37;         /* Gold for Primary Elements */
+  --secondary: #ffffff;       /* White for Secondary Elements */
+  --accent: #d4af37;          /* Gold for Accent Elements (matches primary) */
+  --gray: rgba(128, 128, 128, 0.5); /* Semi-transparent Gray for Shadows */
+}
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display SC';
+    scroll-behavior: smooth;
+  }
+  
+  section{
+    padding: 100px 200px;
+  }
+  
+  .site-wide {
+      width: 3%;
+      height: 70%;
+  }
+  
+  .logo-wrapper {
+      display: flex;
+      align-items: center;
+      padding: 0 1%;
+  }
+  
+  .logo-wrapper > img {
+      height: 40px;
+      width: auto;
+  }
+  
+  .main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  }
+  
+  .main .content{
+    max-width: 800px;
+  }
+  
+  .main .content h2{
+    color: #f9e5d7;
+    font-size: 2em;
+    font-weight: 500;
+  }
+  
+  .main .content h2 span{
+    font-size: 2.8em;
+    font-weight: 600;
+  }
+  
+  .animated-text{
+    position: relative;
+    height: 70px;
+    overflow: hidden;
+  }
+  
+  .animated-text h3{
+    color: var(--textDark);
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 1px;
+  }
+  
+  .animated-text h3:nth-child(1){
+    animation: text-move 10s infinite;
+  }
+  
+  @keyframes text-move{
+    0%{
+      margin-top: 0;
+    }
+    25%{
+      margin-top: -70px;
+    }
+    50%{
+      margin-top: -140px;
+    }
+    75%{
+      margin-top: -70px;
+    }
+    100%{
+      margin-top: 0;
+    }
+  }
+  
+  .btn{
+    color: var(--textDark);
+    background: var(--accent);
+    font-size: 1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    margin-top: 30px;
+    transition: 0.5s ease;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .btn:hover{
+    background: var(--background);
+  }
+  
+  header{
+    z-index: 999;
+    position: fixed;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent 80%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s ease;
+  }
+
+  header.sticky{
+    background:#000;
+    padding: 15px 200px;
+  }
+  
+  header .brand{
+    color: var(--textDark);
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  header .navigation{
+    position: relative;
+  }
+  
+  header .navigation a{
+    display: inline;
+    color: var(--textDark);
+    font-size: 1.3em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+  }
+  
+  header .navigation a:hover{
+    color: var(--primary);
+  }
+  
+  header.sticky .navigation a:hover{
+    color: var(--primary);
+  }
+  
+  body{
+    font-family: 'Montserrat';
+    font-weight: 400;
+  }
+  
+  .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .section-title{
+    position: relative;
+    color: #0c0a08;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 60px;
+  }
+  
+  .section-title:before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 500px;
+    height: 4px;
+    background: var(--primary);
+    transform: translateX(-50%);
+  }
+  
+  .section2 {
+    background-color:var(--textLight);
+    color:var(--textDark)
+  }
+  
+  .section2 .content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .section2 h2 {
+    color: var(--secondary)
+  }
+  
+  .section2 h3 {
+    color: var(--secondary)
+  }
+  
+  #wine-details {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #wine-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  #wine-image {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+  
+  #wine-rating,
+  #wine-location {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .footer{
+    background: var(--background);
+    color: var(--textDark);
+    text-align: center;
+    padding: 2em;
+  }
+  
+  .footer .footer-title{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .footer p{
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .footer p a{
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 1040px){
+    header{
+      padding: 12px 20px;
+    }
+  
+    header.sticky{
+      padding: 10px 20px;
+    }
+  
+    header .navigation{
+      display: none;
+    }
+  
+    header .navigation.active{
+      z-index: 888;
+      position: fixed;
+      background: #000000;
+      top: 0;
+      right: 0;
+      width: 380px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+      transition: 0.3s ease;
+    }
+  
+    header .navigation a{
+      color: #ffffff;
+      font-size: 1.2em;
+      margin: 10px;
+      padding: 0 20px;
+      border-radius: 20px;
+    }
+  
+    header .navigation a:hover{
+      background: #000000;
+      color: #fff;
+      transition: 0.3s ease;
+    }
+  
+    .menu-btn{
+      position: absolute;
+      background: url(../assets/ico/burger.png)no-repeat;
+      background-size: 30px;
+      background-position: center;
+      width: 40px;
+      height: 40px;
+      right: 0;
+      margin: 0 20px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      filter: invert(100%);
+    }
+  
+    .menu-btn.active{
+      z-index: 999;
+      background: url(../assets/ico/x.png)no-repeat;
+      background-size: 25px;
+      background-position: center;
+      transition: 0.3s ease;
+    }
+  
+    section{
+      padding: 80px 20px;
+    }
+  
+    .main .content h2{
+      font-size: 1em;
+    }
+  
+    .animated-text h3{
+      font-size: 2.2em;
+      color: var(--secondary);
+    }
+  
+    .section-title{
+      font-size: 1.8em;
+    }
+  
+    .about .content{
+      flex-direction: column;
+    }
+  
+    .about .content .column{
+      position: relative;
+      width: 100%;
+    }
+  
+    .about .content .col-right{
+      margin-top: 40px;
+    }
+  
+    .section3 .content{
+      flex-direction: column;
+    }
+  
+    .section3 .content .column{
+      position: relative;
+      width: 100%;
+    }
+  
+    .section3 .content .col-right{
+      margin-top: 40px;
+    }
+  }
+
+    /* Keyframes */
+  @keyframes fade-left {
+    from {
+        scale: 1;
+        translate: 0%;
+        opacity: 1;
+    }
+    
+    to {
+        scale: 0.8;
+        translate: -18%;
+        opacity: 0;
+    }
+  }
+  
+  @keyframes fade-right {
+    from {
+        scale: 1;
+        translate: 0%;
+        opacity: 1;
+    }
+    
+    to {
+        scale: 0.8;
+        translate: 18%;
+        opacity: 0;
+    }
+  }

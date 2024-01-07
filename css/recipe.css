@@ -1,0 +1,463 @@
+/* Fonts */
+@font-face {
+  font-family: "EB Garamond";
+  font-weight: 400;
+  src: url(../assets/fonts/EB_Garamond/static/EBGaramond-Regular.ttf);
+}
+
+@font-face {
+font-family: "GFS Didot";
+font-weight: 400;
+src: url(../assets/fonts/GFS_Didot/GFSDidot-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  font-weight: 700;
+  src: url(../assets/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf);
+}
+
+@font-face {
+font-family: "Libre Bodoni";
+font-weight: 700;
+src: url(../assets/fonts/Libre_Bodoni/static/LibreBodoni-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  src: url(../assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+  }
+
+@font-face {
+ font-family: "Playfair Display SC";
+  font-weight: 700;
+  src: url(../assets/fonts/Playfair_Display_SC/PlayfairDisplaySC-Regular.ttf);
+}
+
+/* Dark and Elegant Color Palette for a Wine Website */
+:root {
+  --textDark: #ffffff;         /* White for Text on Dark Background */
+  --textLight: #333333;       /* Dark Gray for Text on Light Background */
+  --background: #1a1a1a;      /* Slightly Lighter Dark Background */
+  --primary: #d4af37;         /* Gold for Primary Elements */
+  --secondary: #ffffff;       /* White for Secondary Elements */
+  --accent: #d4af37;          /* Gold for Accent Elements (matches primary) */
+  --gray: rgba(128, 128, 128, 0.5); /* Semi-transparent Gray for Shadows */
+}
+
+.loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: var(--textLight);
+  z-index: 9999;
+  transition: all 0.5s ease-in;
+  color: var(--accent);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, a {
+  font-family: "EB Garamond";
+  text-transform: uppercase;
+  color: white;
+}
+
+section{
+  padding: 100px 200px;
+}
+
+.site-wide {
+    width: 3%;
+    height: 70%;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 1%;
+}
+
+.logo-wrapper > img {
+    height: 40px;
+    width: auto;
+}
+
+@keyframes text-move{
+  0%{
+    margin-top: 0;
+  }
+  25%{
+    margin-top: -70px;
+  }
+  50%{
+    margin-top: -140px;
+  }
+  75%{
+    margin-top: -70px;
+  }
+  100%{
+    margin-top: 0;
+  }
+}
+
+/* Header Stylings */
+header {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo-container > img {
+  max-height: 40px;
+  max-width: 40px;
+  padding: 0 10px;
+  box-sizing: unset;
+}
+
+.logo-container > h2 {
+  font-size: 1.3em;
+}
+
+nav {
+  padding: 10px;
+}
+
+nav > a {
+  width: 130px;
+  font-size: 1.3em;
+  padding: 5px 5px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+.line {
+  height: 1px;
+  width: 130px;
+  background-color: #d4af37;
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  transform: translateX(260px);
+}
+
+a:nth-child(1):hover ~ .line {
+  transform: translateX(0px);
+}
+
+a:nth-child(2):hover ~ .line {
+  transform: translateX(130px);
+}
+
+a:nth-child(4):hover ~ .line {
+  transform: translateX(390px);
+}
+
+a:nth-child(1):hover {
+  color: #d4af37;
+}
+
+a:nth-child(2):hover {
+  color: #d4af37;
+}
+
+a:nth-child(3):hover {
+  color: #d4af37;
+}
+
+a:nth-child(4):hover {
+  color: #d4af37;
+}   
+/* End Header Stylings */
+
+.btn{
+  color: var(--textDark);
+  background: var(--accent);
+  font-size: 1em;
+  font-weight: 600;
+  display: inline-block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  margin-top: 30px;
+  transition: 0.5s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.btn:hover{
+  background: var(--background);
+}
+
+body{
+  font-family: 'Montserrat';
+  font-weight: 400;
+  min-height: 110vh;
+}
+
+.title{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-title{
+  position: relative;
+  color: #0c0a08;
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+.section-title:before{
+  content: '';
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  width: 500px;
+  height: 4px;
+  background: var(--primary);
+  transform: translateX(-50%);
+}
+
+.section2 {
+  background-color:var(--textLight);
+  color:var(--textDark)
+}
+
+.section2 h2{
+  color: var(--textDark);
+}
+
+.section2 .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.list-item {
+  margin: 5px 0;
+}
+
+.footer{
+  background: var(--background);
+  color: var(--textDark);
+  text-align: center;
+  padding: 2em;
+}
+
+.footer .footer-title{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer p{
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.footer p a{
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 1040px){
+  header{
+    padding: 12px 20px;
+  }
+
+  header.sticky{
+    padding: 10px 20px;
+  }
+
+  header .navigation{
+    display: none;
+  }
+
+  header .navigation.active{
+    z-index: 888;
+    position: fixed;
+    background: #000000;
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    transition: 0.3s ease;
+  }
+
+  header .navigation a{
+    color: #ffffff;
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 0 20px;
+    border-radius: 20px;
+  }
+
+  header .navigation a:hover{
+    background: #000000;
+    color: #fff;
+    transition: 0.3s ease;
+  }
+
+  section{
+    padding: 80px 20px;
+  }
+
+  .main .content h2{
+    font-size: 1em;
+  }
+
+  .animated-text h3{
+    font-size: 2.2em;
+    color: #f9e5d7;
+  }
+
+  .section-title{
+    font-size: 1.8em;
+  }
+
+  .about .content{
+    flex-direction: column;
+  }
+
+  .about .content .column{
+    position: relative;
+    width: 100%;
+  }
+
+  .about .content .col-right{
+    margin-top: 40px;
+  }
+
+  .section3 .content{
+    flex-direction: column;
+  }
+
+  .section3 .content .column{
+    position: relative;
+    width: 100%;
+  }
+
+  .section3 .content .col-right{
+    margin-top: 40px;
+  }
+}
+
+/*Recipe*/
+.recipe-details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.data-point {
+  width:70vw;
+  font-size: 22px;
+}
+
+.recipe-image{
+  object-fit: cover;
+  border: 0px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.recipe-title {
+  text-align: center;
+  margin: 10px 10px;
+}
+
+.description-p {
+  text-align: left;
+  margin: 10px 50px;
+}
+
+.ingredient-section {
+  align-self: flex-start;
+  margin: 10px 100px;
+}
+
+.ingredient-section h3 {
+  font-size: 2em;
+}
+
+.ingredient-ul li {
+  list-style-position: inside;
+}
+
+  /* Keyframes */
+@keyframes fade-left {
+  from {
+      scale: 1;
+      translate: 0%;
+      opacity: 1;
+  }
+  
+  to {
+      scale: 0.8;
+      translate: -18%;
+      opacity: 0;
+  }
+}
+
+@keyframes fade-right {
+  from {
+      scale: 1;
+      translate: 0%;
+      opacity: 1;
+  }
+  
+  to {
+      scale: 0.8;
+      translate: 18%;
+      opacity: 0;
+  }
+}

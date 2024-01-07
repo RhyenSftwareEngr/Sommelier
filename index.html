@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Sommelier | Age Verification</title>
+</head>
+<body>
+    <div id="age-verification">
+        <div id="quote">
+            <p class="quote-text">"Age is merely the number of years the world has been enjoying you."</p>
+        </div>
+        <div id="date-of-birth">
+            <div id="dob-msg" class="message">Please enter your year of birth:</div>
+            <div class="year-input">
+                <input class="number" data-field-index="1" type="number" min="1" max="2" placeholder="Y" pattern="[0-9]*">
+                <input class="number" data-field-index="2" type="number" min="0" max="9" placeholder="Y" pattern="[0-9]*">
+                <input class="number" data-field-index="3" type="number" min="0" max="9" placeholder="Y" pattern="[0-9]*">
+                <input class="number" data-field-index="4" type="number" min="0" max="9" placeholder="Y" pattern="[0-9]*">
+            </div>
+        </div>
+        <div id="age-warning">
+            <p class="warning-text" >You confirm you are aged 21 years or over and 
+                are of legal drinking age.
+            </p>
+    </div>
+        <button id="enter">Enter</button>
+    </div>
+    <script src="./js/age_verify.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sommelier | Wines</title>
+    <link rel="stylesheet" href="../css/wine_pair.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+          <img src="../assets/logo/Sommelier-removebg-preview.png" alt="Logo">
+          <h2>Sommelier</h2>
+      </div>
+      <nav>
+          <a href="../home.html">Home</a><!--
+          --><a href="wine_list.html">Wines</a><!--
+          --><a href="wine_pair.html">Pairings</a><!--
+          --><a href="about.html">About</a>
+          <div class="line"></div>
+      </nav>
+    </header>
+
+    <section class="main" id="main">
+      <div class="content">
+        <video autoplay loop muted>
+          <source src="../assets/splash/winestock.mp4" type="video/mp4">
+        </video>
+          <div class="animated-text">
+            <h3>Wine Pairing</h3>
+            <h3>Congruent Pairing</h3>
+            <h3>Contrasting Pairing</h3>
+          </div>
+          <a href="#section2" class="btn">
+            Start Pairing
+          </a>
+      </div>
+    </section>
+
+    <section class="section2" id="section2">
+        <div class="title reveal">
+          <h2 class="section-title">Wine Pairing</h2>
+          <h3>
+            Wine pairing is a process of pairing food dishes with wine to enhance the dining experience. 
+            There are two types of pairings, the congruent pairing in which wines are paired with foods that are complementary in terms of their taste
+            and contrasting pairing in which wines are paired with foods that enhances both the wine and the dish regardless of their contrast in taste.
+          </h3>
+        </div>
+      
+        <div class="spoonacular-data-container">
+          <h1>Search a wine and start pairing</h1>
+          <div id="search-bar-container" class="animation">
+            <div class="search-bar-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
+              </svg>
+            </div>
+            <input type="search" id="search-bar" placeholder="Enter a wine name (e.g., merlot)" search-input>
+          </div>
+          
+          <button id="search-button">Search</button>
+
+          <div id="container">
+            <div id="description-output"></div>
+            <ul id="dish-pairings-output"></ul>
+            <div id="recommended-dish-container"></div>
+        </div>
+        </div>
+        <script src="../js/wine_pair.js" charset="utf-8"></script>
+      </section>
+
+    <footer class="footer">
+      <span class="footer-title">Sommelier</span>
+      <p>Copyright &copy; <a href="#">2023 Gusto Ko Fries</a>. All Rights Reserved</p>
+    </footer>
+
+    <script src="../js/scroll.js" charset="utf-8"></script>
+  </body>
+</html>
+      
